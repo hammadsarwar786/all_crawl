@@ -9,7 +9,7 @@ create_table()
 options = Options()
 options.add_experimental_option('detach', True, )
 driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
-for n in range(1, 4000):
+for n in range(744, 4000):
 
     url = f"https://www.propertyfinder.ae/en/search?page={n}"
 
@@ -33,6 +33,7 @@ for n in range(1, 4000):
         print(entry)
         print("------")
         insert_property(entry)
+    print(n)
 
 
 
